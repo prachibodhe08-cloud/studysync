@@ -1,0 +1,36 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  background: linear-gradient(135deg, #071126 0%, #112548 100%);
+  color: #f6f8ff;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; }
+button, input { font: inherit; }
+
+.app-shell { max-width: 1280px; margin: 0 auto; padding: 24px; }
+.hero { display: flex; justify-content: space-between; gap: 24px; align-items: center; margin-bottom: 24px; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.8rem; color: #8ec5ff; }
+.hero h1 { font-size: 2.6rem; margin: 0 0 8px; }
+.hero-card, .panel, .stat-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; backdrop-filter: blur(10px); }
+.hero-card { padding: 16px; min-width: 260px; }
+.hero-card label { display: flex; flex-direction: column; gap: 4px; margin-top: 8px; }
+.hero-card input, .chat-inputs input { width: 100%; padding: 8px 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.15); background: rgba(7,17,38,0.8); color: white; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-bottom: 20px; }
+.stat-card { padding: 16px; display: flex; flex-direction: column; gap: 6px; }
+.stat-card strong { font-size: 1.4rem; }
+.content-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 20px; }
+.panel { padding: 16px; }
+.panel ul { padding-left: 18px; }
+.room-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.chat-feed { min-height: 240px; background: rgba(7,17,38,0.75); border-radius: 12px; padding: 12px; margin-bottom: 10px; display: flex; flex-direction: column; gap: 8px; }
+.chat-inputs { display: flex; gap: 8px; }
+button { border: none; border-radius: 10px; padding: 8px 12px; background: #2c7be5; color: white; cursor: pointer; }
+canvas { width: 100%; height: auto; border-radius: 12px; background: white; touch-action: none; }
+.actions { margin-top: 10px; }
+
+@media (max-width: 900px) {
+  .hero, .room-layout, .content-grid, .stats-grid { display: flex; flex-direction: column; }
+}

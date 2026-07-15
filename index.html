@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudySync | HTML CSS JS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Remote learning, reimagined</p>
+          <h1>StudySync</h1>
+          <p>Create study groups, share resources, and stay in sync in real time.</p>
+        </div>
+        <div class="hero-card">
+          <label>
+            Room name
+            <input id="roomName" value="calc-room" />
+          </label>
+          <label>
+            Your name
+            <input id="userName" value="Student" />
+          </label>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <article class="stat-card">
+          <strong id="groupCount">0</strong>
+          <span>Groups</span>
+        </article>
+        <article class="stat-card">
+          <strong id="resourceCount">0</strong>
+          <span>Resources</span>
+        </article>
+        <article class="stat-card">
+          <strong id="quizCount">0</strong>
+          <span>Quizzes</span>
+        </article>
+        <article class="stat-card">
+          <strong id="tutorCount">0</strong>
+          <span>Tutors</span>
+        </article>
+      </section>
+
+      <main class="content-grid">
+        <section class="panel">
+          <h3>Study Groups</h3>
+          <ul id="groupsList"></ul>
+        </section>
+        <section class="panel">
+          <h3>Shared Resources</h3>
+          <ul id="resourcesList"></ul>
+        </section>
+        <section class="panel">
+          <h3>Quizzes</h3>
+          <ul id="quizzesList"></ul>
+        </section>
+        <section class="panel">
+          <h3>Tutor Marketplace</h3>
+          <ul id="tutorsList"></ul>
+        </section>
+      </main>
+
+      <section class="room-layout">
+        <section class="panel">
+          <h3>Live Chat</h3>
+          <div id="chatFeed" class="chat-feed"></div>
+          <div class="chat-inputs">
+            <input id="chatInput" placeholder="Type a message" />
+            <button id="sendButton">Send</button>
+          </div>
+        </section>
+        <section class="panel">
+          <h3>Collaborative Whiteboard</h3>
+          <canvas id="board" width="520" height="320"></canvas>
+          <div class="actions">
+            <button id="clearButton">Clear board</button>
+          </div>
+        </section>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
